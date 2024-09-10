@@ -1,0 +1,26 @@
+body {
+  display: grid;
+  margin: 0;
+  height: 100vh;
+  place-items: center;
+  font-family: Arial, sans-serif;
+}
+
+.Calendar {
+    border-radius: 10px;
+    box-shadow: 0 0 30px #222222;
+    overflow: hidden;
+    width: 300px;
+    color: white;
+    padding: 20px;
+    background-color: #111111;
+}
+.Header {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 2px;
+    padding: 10px;
+}
+.btn{
+ cursor: pointer;
+}

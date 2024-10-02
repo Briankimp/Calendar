@@ -24,3 +24,19 @@ body {
 .btn{
  cursor: pointer;
 }
+#month-year {
+    font-size: 20px;
+    font-weight:bold;
+}
+
+.Weekdays, .days {
+  display: flex;
+  flex-wrap:wrap;
+  padding-left: 10px;
+}
+.Weekdays{
+  justify-content: space-between;
+}
+.days{
+  height: 240px;
+}

@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const daysContainer = document.getElementById('days')
   const months = [
     "January",
-    "February",
+    "February", 
     "March",
     "April",
     "May",
@@ -26,10 +26,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
     monthyear.textContent = `${months[month]} ${year}`;
     
-    // daysContainer.
-      //current month's dates
-      // for (let i = 1; i <= lastDay; 1)
+    daysContainer.innerHTML = '';
+
+    // current month's dates
+    for (let i = 1; i <= lastDay; i++){
+      const dayDiv = document.createElement('div');
+      dayDiv.textContent = i;
+      if (i === Today.getDate() && month===Today.getMonth() && year===Today.getFullYear()){
+        dayDiv.classList.add('today');
+      }
+      daysContainer.appendChild(dayDiv);
   }
  
   renderCalendar(CurrentDate);
+}
 });

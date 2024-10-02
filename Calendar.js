@@ -23,11 +23,12 @@ document.addEventListener("DOMContentLoaded", function () {
     const month = date.getMonth();
     const firstDay = new Date(year, month, 1).getDay();
     const lastDay = new Date(year, month + 1, 0).getDate();
+
     monthyear.textContent = `${months[month]} ${year}`;
     
-    daysContainer.
+    // daysContainer.
       //current month's dates
-      for (let i = 1; i <= lastDay; 1)
+      // for (let i = 1; i <= lastDay; 1)
   }
  
   renderCalendar(CurrentDate);

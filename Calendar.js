@@ -1,9 +1,10 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const monthyear = document.getElementById("month-year");
-    const daysContainer = document.getElementById('days')
+  const monthyear = document.getElementById("month-year");
+  const daysContainer = document.getElementById("days");
+
   const months = [
     "January",
-    "February", 
+    "February",
     "March",
     "April",
     "May",
@@ -14,7 +15,8 @@ document.addEventListener("DOMContentLoaded", function () {
     "October",
     "November",
     "December",
-    ];
+  ];
+
   let CurrentDate = new Date();
   let Today = new Date();
 
@@ -24,20 +26,31 @@ document.addEventListener("DOMContentLoaded", function () {
     const firstDay = new Date(year, month, 1).getDay();
     const lastDay = new Date(year, month + 1, 0).getDate();
 
+    // Display current month and year
     monthyear.textContent = `${months[month]} ${year}`;
-    
-    daysContainer.innerHTML = '';
 
-    // current month's dates
-    for (let i = 1; i <= lastDay; i++){
-      const dayDiv = document.createElement('div');
+    // Clear previous days
+    daysContainer.innerHTML = "";
+
+    // Populate days of the month
+    for (let i = 1; i <= lastDay; i++) {
+      const dayDiv = document.createElement("div");
       dayDiv.textContent = i;
-      if (i === Today.getDate() && month===Today.getMonth() && year===Today.getFullYear()){
-        dayDiv.classList.add('today');
+
+      // Highlight today's date
+      if (
+        i === Today.getDate() &&
+        month === Today.getMonth() &&
+        year === Today.getFullYear()
+      ) {
+        dayDiv.classList.add("today");
       }
       daysContainer.appendChild(dayDiv);
+    }
   }
- 
+
+  // Initial render of the calendar when page is loaded
   renderCalendar(CurrentDate);
-}
 });
+
+

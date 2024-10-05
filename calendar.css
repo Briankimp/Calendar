@@ -9,7 +9,7 @@ body {
 .Calendar {
     border-radius: 10px;
     box-shadow: 0 0 30px #222222;
-    overflow: hidden;
+    /* overflow: hidden; */
     width: 300px;
     color: white;
     padding: 20px;
@@ -18,7 +18,6 @@ body {
 .Header {
     display: flex;
     justify-content: space-between;
-    margin-right: 2px;
     padding: 10px;
 }
 .btn{
@@ -39,4 +38,7 @@ body {
 }
 .days{
   height: 240px;
+}
+.today{
+  padding: 5px;
 }
